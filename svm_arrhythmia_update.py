@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_excel('arrhythmia_data - Copy.xlsx')
+dataset = pd.read_excel('arrhythmia_data_update.xlsx')
 X = dataset.iloc[:, 0:-1].values
 y = dataset.iloc[:, -1].values
 
@@ -39,7 +39,7 @@ while i >= 0:
 #=============================================================
 # Applying PCA
 from sklearn.decomposition import PCA
-pca = PCA(n_components=8)
+pca = PCA(n_components=38)
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 explained_variance = pca.explained_variance_ratio_
